@@ -1,0 +1,76 @@
+﻿@model MVC_Ruou.Models.ReceiptVM
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["banner"] = "Chi tiết đơn hàng";
+}
+
+<div class="col-md-12" id="info-box">
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.receipt.UserName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.receipt.UserName)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.receipt.CreateDate)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.receipt.CreateDate)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.receipt.Quantity)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.receipt.Quantity)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.receipt.Total)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.receipt.Total)
+        </dd>
+    </dl>
+</div>
+<div>
+    <table class="table" id="product-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.receiptdetails[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.receiptdetails[0].inputPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.receiptdetails[0].outputPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.receiptdetails[0].Amount)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.receiptdetails)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.inputPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.outputPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="Edit" asp-route-id="@Model.receipt.ID"><button class="btn btn-primary">Chỉnh sửa</button></a>
+    <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+</div>

@@ -1,0 +1,45 @@
+﻿@model MVC_Ruou.Models.Wine
+
+@{
+    ViewData["Title"] = "Thông tin chi tiết";
+    ViewData["banner"] = "Thông tin chi tiết";
+}
+
+<div class="detail-info">
+    <div class="col-md-12" id="info-box">
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.inputPrice)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.inputPrice)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.outputPrice)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.outputPrice)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+    </dl>
+        <a asp-action="Edit" asp-route-id="@Model?.ID"><button class="btn btn-primary">Chỉnh sửa</button></a>
+        <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+    </div>
+</div>

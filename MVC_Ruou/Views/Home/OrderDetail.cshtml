@@ -1,0 +1,60 @@
+﻿@model MVC_Ruou.Models.OrderVM
+
+@{
+    ViewData["Title"] = "Đặt hàng";
+    ViewData["banner"] = "Chi tiết đặt hàng";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <p class="h4">Mã hóa đơn: @Html.DisplayFor(model => model.idchosenorder)</p>
+        <form asp-action="OrderDetail" method="post">
+            <input type="hidden" name="idchosenorder" value="@Model.idchosenorder" />
+            <input type="hidden" name="chosenorder" value="@Model.chosenorder" />
+            <select asp-for="chosenorder.WineName" asp-items="Model.productname" class="form-control">
+                <option value="">Chọn sản phẩm</option>
+            </select>
+            <div class="form-group">
+                <label asp-for="chosenorder.Amount" class="control-label"></label>
+                <input asp-for="chosenorder.Amount" class="form-control" />
+                <span asp-validation-for="chosenorder.Amount" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+        </form>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-hover" id="product-table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.orderdetail[0].WineName)</th>
+                    <th>@Html.DisplayNameFor(model => model.orderdetail[0].Amount)</th>
+                    <th>@Html.DisplayNameFor(model => model.orderdetail[0].price)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.orderdetail)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.WineName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.price)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <form asp-action="FinishOrder" method="post">
+            <input type="hidden" name="idchosenorder" value="@Model.idchosenorder" />
+            <input type="hidden" name="total" value="@Model.total"/>
+            <button type="submit" class="btn btn-primary">Tạo đơn hàng</button>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

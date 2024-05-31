@@ -1,0 +1,48 @@
+﻿@model MVC_Ruou.Models.Receipt
+
+@{
+    ViewData["Title"] = "Delete";
+    ViewData["banner"] = "Xóa đơn nhập kho";
+}
+
+<h3>Bạn có chắc chắn muốn xóa đơn này không. Khi xóa đơn sẽ xóa tất cả chi tiết của đơn này</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceiptID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceiptID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+    </form>
+</div>

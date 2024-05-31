@@ -1,0 +1,47 @@
+﻿@model MVC_Ruou.Models.ReceiptDetail
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ReceiptDetail</h4>
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ReceiptID)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ReceiptID)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.inputPrice)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.inputPrice)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.outputPrice)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.outputPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Chỉnh sửa</a> |
+    <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+</div>
