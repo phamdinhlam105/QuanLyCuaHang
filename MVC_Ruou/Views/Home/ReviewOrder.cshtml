@@ -1,0 +1,63 @@
+﻿@model MVC_Ruou.Models.ReviewOrder
+
+@{
+    ViewData["Title"] = "Xem lại phiếu đặt hàng";
+    ViewData["banner"] = "Đã đặt hàng thành công";
+}
+
+<div class="col-md-12" id="info-box">
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.order.customerName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.order.customerName)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.order.customerPhone)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.order.customerPhone)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.order.total)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.order.total)
+        </dd>
+    </dl>
+</div>
+<div>
+    <table class="table" id="product-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.orderdetails[0].WineName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orderdetails[0].price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orderdetails[0].Amount)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.orderdetails)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WineName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+</div>

@@ -1,0 +1,83 @@
+﻿@model MVC_Ruou.Models.OrderListVM
+@{
+    ViewData["Title"] = "Đơn đặt hàng";
+    ViewData["banner"] = "Danh sách đơn đặt hàng";
+}
+
+<div class="top-div">
+    
+    <div class="search-div">
+        <form asp-controller="Orders" asp-action="Index" method="get" id="search-form">
+            <label for="search-form">Tìm kiếm </label>
+            <p>
+
+                Tên khách: <input type="text" name="SearchString" />
+                <input type="submit" value="Tìm" />
+            </p>
+        </form>
+    </div>
+</div>
+
+
+<table class="table table-hover" id="product-table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.orders[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orders[0].customerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orders[0].customerPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orders[0].total)
+            </th>
+            <th>
+               Tình trạng
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.orders)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.customerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.customerPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.total)
+                </td>
+                <td>
+                    @if(item.status==0)
+                    {
+                        <p>Chưa hoàn thành</p>
+                    }
+
+                    else
+                    {
+                        <p>Hoàn thành</p>
+                    }
+                </td>
+                <td>
+                    @if (item.status == 0)
+                    {
+                        <form asp-action="Index" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="btn btn-outline-secondary">Hoàn thành đơn</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Wines" asp-action="Index"><button class="btn btn-outline-secondary">Quay lại</button></a>

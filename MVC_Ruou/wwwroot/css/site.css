@@ -1,0 +1,135 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: 'Roboto';
+    background-image:url("../assets/ruou_bg.jpg");
+    background-position:center;
+    background-repeat:repeat-y;
+    
+    
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    filter: drop-shadow(0 0 0.2rem black);
+}
+.container {
+    padding-top: 5%;
+    padding-bottom:5%;
+}
+
+.top-div{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.search-div {
+    display: flex;
+    justify-content: end;
+}
+
+#search-form {
+    border: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(155, 244, 161,1);
+}
+
+#product-table, #create-form, #edit-form, #info-box {
+    border: solid 2px black;
+    margin-top: 5%;
+    background-color: rgba(136, 232, 240, 1);
+    margin-bottom: 5%;
+}
+
+#create-form, #edit-form {
+    padding: 5% 5% 5% 5%;
+    border-radius: 5px;
+}
+
+#product-table tr{
+    vertical-align:middle;
+}
+
+.banner {
+    background-image:url("../assets/ruou_banner.jpeg");
+    background-position:top;
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:100%;
+    margin-top:4%;
+    margin-bottom:2%;
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+#create-box,  #info-box ,#edit-box{
+    margin: auto;
+    width: 70%;
+    padding: 5% 2% 5% 2%;
+    border: solid 2px black;
+    border-radius: 10px 10px 10px 10px;
+    font-size:25px;
+}
+
+#edit-box{
+    border:none;
+}
+
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 5%;
+    z-index: 100;
+}
+
+button {
+    margin: 5px 5px 5px 5px;
+}
+
+.detail-info {
+    display:flex;
+    align-items: center;
+    min-height:400px;
+}
+
+
+.form-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.footer-container{
+    padding-left:5%;
+    height:50px;
+    background-color:burlywood;
+    display:flex;
+    align-items:center;
+}

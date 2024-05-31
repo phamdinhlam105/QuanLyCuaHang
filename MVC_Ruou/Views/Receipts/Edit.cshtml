@@ -1,0 +1,43 @@
+﻿@model MVC_Ruou.Models.Receipt
+
+@{
+    ViewData["Title"] = "Edit";
+    ViewData["banner"] = "Chỉnh sửa đơn nhập kho";
+}
+
+<div class="row">
+    <div class="col-md-4" id="edit-box">
+        <form asp-action="Edit" id="edit-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <input type="hidden" name="ReceiptID" value="@Model.ReceiptID" />
+            <input type="hidden" name="Quantity" value="@Model.Quantity" />
+            <input type="hidden" name="Total" value="@Model.Total" />
+            <p>Mã hóa đơn:  @Html.DisplayFor(model => model.ReceiptID)</p>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateDate" class="control-label"></label>
+                <input asp-for="CreateDate" class="form-control" />
+                <span asp-validation-for="CreateDate" class="text-danger"></span>
+            </div>
+            <p>Tổng số lượng:  @Html.DisplayFor(model => model.Quantity)</p>
+            <p>Tổng tiền:  @Html.DisplayFor(model => model.Total)</p>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

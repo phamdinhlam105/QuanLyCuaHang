@@ -1,0 +1,74 @@
+﻿@model IEnumerable<MVC_Ruou.Models.ReceiptDetail>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["banner"] = "Tất cả các chi tiết nhập kho";
+    @section Wines {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Wines" asp-action="Index">Sản phẩm</a>
+        </li>
+    }
+    ;
+    @section Receipt {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Receipts" asp-action="Index">Nhập kho</a>
+        </li>
+    }
+    ;
+    @section Logout {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Đăng xuất</a>
+        </li>
+    }
+    ;
+}
+
+<table class=" table table-hover" id="product-table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReceiptID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.inputPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.outputPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceiptID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+             <td>
+                  @Html.DisplayFor(modelItem => item.inputPrice)
+             </td>
+             <td>
+                    @Html.DisplayFor(modelItem => item.outputPrice)
+             </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID"><button class="btn btn-outline-secondary">Chỉnh sửa</button></a>
+                    <a asp-action="Details" asp-route-id="@item.ID"><button class="btn btn-outline-secondary">Chi tiết</button></a>
+                    <a asp-action="Delete" asp-route-id="@item.ID"><button class="btn btn-outline-secondary">Xóa</button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<a asp-controller="Receipts" asp-action="Index"><button class="btn btn-primary btn-lg">Quay lại trang nhâp kho</button></a>

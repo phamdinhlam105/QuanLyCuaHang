@@ -1,0 +1,58 @@
+﻿@model MVC_Ruou.Models.ReceiptDetailVM
+
+@{
+    ViewData["Title"] = "Nhập kho";
+    ViewData["banner"] = "Chi tiết đơn nhập kho";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <p class="h4">Mã hóa đơn: @Html.DisplayFor(model => model.chosenreceipt)</p>
+        <form asp-action="Create" method="post">
+            <input type="hidden" name="chosenreceipt" value="@Model.chosenreceipt" />
+            <input type="hidden" name="chosenproduct.ReceiptID" value="@Model.chosenreceipt" />
+            <select asp-for="chosenproduct.Name" asp-items="Model.productname" class="form-control">
+            <option value="">Chọn sản phẩm</option>
+        </select>
+        <div class="form-group">
+            <label asp-for="chosenproduct.Amount" class="control-label"></label>
+            <input asp-for="chosenproduct.Amount" class="form-control" />
+            <span asp-validation-for="chosenproduct.Amount" class="text-danger"></span>
+        </div>
+            <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+        </form>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-hover" id="product-table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.receiptdetails[0].Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.receiptdetails[0].Amount)</th>
+                    <th>@Html.DisplayNameFor(model => model.receiptdetails[0].inputPrice)</th>
+                    <th>@Html.DisplayNameFor(model => model.receiptdetails[0].outputPrice)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model.receiptdetails)
+                {
+                <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.inputPrice)</td>
+                        <td>@Html.DisplayFor(modelItem => item.outputPrice)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <form asp-action="UpdateToDatabase" method="post">
+            <input type="hidden" name="chosenreceiptID" value="@Model.chosenreceipt" />
+            <button type="submit" class="btn btn-primary">Tạo đơn hàng</button>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

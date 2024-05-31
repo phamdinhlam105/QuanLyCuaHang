@@ -1,0 +1,30 @@
+﻿@model MVC_Ruou.Models.Receipt
+
+@{
+    ViewData["Title"] = "Đơn nhập kho";
+    ViewData["banner"] = "Tạo đơn nhập kho";
+}
+<div class="row">
+    <div class="col-md-4" id="create-box">
+        <form asp-action="Create" method="post" id="create-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
