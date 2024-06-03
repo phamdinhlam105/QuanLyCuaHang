@@ -1,0 +1,74 @@
+﻿@model MVC_Ruou.Models.ViewModels.OrderDetailsVM
+@{
+    ViewData["Title"] = "Đơn hàng";
+    ViewData["banner"] = "Chi tiết đơn đặt hàng";
+}
+<div class="col-md-12" id="info-box">
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.chosenOrder.Id)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.chosenOrder.Id)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.chosenOrder.customerName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.chosenOrder.customerName)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.chosenOrder.customerPhone)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.chosenOrder.customerPhone)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.chosenOrder.total)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.chosenOrder.total)
+        </dd>
+    </dl>
+</div>
+<div>
+    <table class="table" id="product-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.listdetail[0].Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.listdetail[0].WineName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.listdetail[0].price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.listdetail[0].Amount)
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.listdetail)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WineName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="Index" asp-controller="Orders"><button class="btn btn-secondary">Quay lại</button></a>
+</div>

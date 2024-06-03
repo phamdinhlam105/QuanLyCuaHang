@@ -17,119 +17,123 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVC_Ruou
 build_property.RootNamespace = MVC_Ruou
-build_property.ProjectDir = E:\phamdinhlam\ASP_MVC\MVC_Ruou\
+build_property.ProjectDir = E:\phamdinhlam\Git_Repository\MVC_Ruou\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = E:\phamdinhlam\ASP_MVC\MVC_Ruou
+build_property.MSBuildProjectDirectory = E:\phamdinhlam\Git_Repository\MVC_Ruou
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Home/Index.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Home/Order.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Home/Order.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Home/OrderDetail.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Home/OrderDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Home/ReviewOrder.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Home/ReviewOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXZpZXdPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Login/Index.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Login/Wrong.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Login/Wrong.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cV3JvbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Orders/Index.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/ReceiptDetails/Create.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/ReceiptDetails/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdERldGFpbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/ReceiptDetails/Delete.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/ReceiptDetails/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdERldGFpbHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/ReceiptDetails/Details.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/ReceiptDetails/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdERldGFpbHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/ReceiptDetails/Edit.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/ReceiptDetails/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdERldGFpbHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/ReceiptDetails/Index.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/ReceiptDetails/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdERldGFpbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Receipts/Create.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Receipts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Receipts/Delete.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Receipts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Receipts/Details.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Receipts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Receipts/Edit.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Receipts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Receipts/Index.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Receipts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Shared/Error.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Wines/Create.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Wines/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Wines/Delete.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Wines/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Wines/Details.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Wines/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Wines/Edit.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Wines/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Wines/Index.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Wines/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/_ViewImports.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/_ViewStart.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/phamdinhlam/ASP_MVC/MVC_Ruou/Views/Shared/_Layout.cshtml]
+[E:/phamdinhlam/Git_Repository/MVC_Ruou/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7odwdr7cvs

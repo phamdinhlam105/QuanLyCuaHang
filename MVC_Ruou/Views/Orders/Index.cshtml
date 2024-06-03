@@ -38,6 +38,7 @@
                Tình trạng
             </th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -68,6 +69,9 @@
                     }
                 </td>
                 <td>
+                    <a asp-action="Details" asp-route-id="@item.Id"><button class="btn btn-primary">Chi tiết</button></a>
+                </td>
+                <td>
                     @if (item.status == 0)
                     {
                         <form asp-action="Index" method="post">
@@ -80,4 +84,3 @@
         }
     </tbody>
 </table>
-<a asp-controller="Wines" asp-action="Index"><button class="btn btn-outline-secondary">Quay lại</button></a>

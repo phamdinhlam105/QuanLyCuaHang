@@ -25,7 +25,13 @@ body {
     
     
 }
-
+li{
+    font-size:20px;
+}
+li:hover{
+    color:red;
+    font-weight:bolder;
+}
 h1 {
     color: white;
     text-transform: uppercase;
@@ -120,16 +126,129 @@ button {
     align-items: center;
     min-height:400px;
 }
-
+.create-receiptdetail{
+    border: black solid 2px;
+    border-radius:5%;
+    background-color:white;
+    min-height:400px;
+    padding: 10px 10px 10px 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
 
 .form-group {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.footer-container{
+/*
+    .footer-container{
     padding-left:5%;
     height:50px;
     background-color:burlywood;
     display:flex;
     align-items:center;
 }
+*/
+
+
+/*home view*/
+
+.wine-container-row{
+    margin-top:2%;
+}
+.wine-item {
+    border-radius: 5%;
+    background-color: white;
+    padding: 5% 5% 5% 5%;
+    box-shadow: 5px 10px rgba(26, 23, 23, 0.44);
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+.wine-item p{
+    font-size:20px;
+}
+.wine-item img{
+    margin-bottom:10px;
+}
+.wine-item:hover{
+    transform:scale(1.3);
+    transition-duration: 0.8s;
+    z-index:50;
+}
+#order-btn{
+    position:fixed;
+    right:30px;
+    bottom:15%;
+    opacity:0.4;
+    z-index:100;
+}
+#order-btn button{
+    background-color:aqua;
+    transform:scale(1.5);
+    color:red;
+}
+
+@keyframes orderbtn{
+    0%{background-color:aqua;color:red;}
+    33%{background-color:red;color:mediumspringgreen}
+    66%{background-color:blue}
+    100%{background-color:aqua;color:red;}
+}
+
+#order-btn:hover {
+    opacity: 1;
+}
+
+#order-btn:hover button{
+    animation: orderbtn 3s infinite;
+}
+
+/*login*/
+.login-top{
+    display:flex;
+}
+.login-top div{
+    margin:auto;
+}
+#login-box {
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+    #login-box .form-group label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    #login-box .form-group input.form-control {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+        #login-box .form-group input.form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    #login-box .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        #login-box .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }

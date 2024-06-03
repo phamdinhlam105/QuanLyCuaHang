@@ -6,8 +6,10 @@ namespace MVC_Ruou.Models
     public class Login
     {
         [Display(Name = "Tên đăng nhập")]
+        [Required(ErrorMessage = "Cần nhập tên đăng nhập")]
         public string username { get; set; }
         [Display(Name = "Mật khẩu")]
+        [Required(ErrorMessage = "Cần nhập mật khẩu")]
         public string password { get; set; }
         
         private int status { get; set; }

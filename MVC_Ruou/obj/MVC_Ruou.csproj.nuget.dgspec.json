@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\phamdinhlam\\ASP_MVC\\MVC_Ruou\\MVC_Ruou.csproj": {}
+    "E:\\phamdinhlam\\Git_Repository\\MVC_Ruou\\MVC_Ruou.csproj": {}
   },
   "projects": {
-    "E:\\phamdinhlam\\ASP_MVC\\MVC_Ruou\\MVC_Ruou.csproj": {
+    "E:\\phamdinhlam\\Git_Repository\\MVC_Ruou\\MVC_Ruou.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\phamdinhlam\\ASP_MVC\\MVC_Ruou\\MVC_Ruou.csproj",
+        "projectUniqueName": "E:\\phamdinhlam\\Git_Repository\\MVC_Ruou\\MVC_Ruou.csproj",
         "projectName": "MVC_Ruou",
-        "projectPath": "E:\\phamdinhlam\\ASP_MVC\\MVC_Ruou\\MVC_Ruou.csproj",
+        "projectPath": "E:\\phamdinhlam\\Git_Repository\\MVC_Ruou\\MVC_Ruou.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\phamdinhlam\\ASP_MVC\\MVC_Ruou\\obj\\",
+        "outputPath": "E:\\phamdinhlam\\Git_Repository\\MVC_Ruou\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A5vRQU7G1+L/0BcfkEPhjV7yo5omL4oIjh5g/wdcJs88nesOtDmobPy2iNlLk9IKKrqUE5G3xwVtJkApAjCXtQ==",
+  "dgSpecHash": "QSUAx7H+vDUFoqQIUmBO9RYscVw6FVlncAl+xQ5pJHLIeHzP5bcOvGSqJNhcudOdgoVIFehURqvSHqbNte1V9Q==",
   "success": true,
-  "projectFilePath": "E:\\phamdinhlam\\ASP_MVC\\MVC_Ruou\\MVC_Ruou.csproj",
+  "projectFilePath": "E:\\phamdinhlam\\Git_Repository\\MVC_Ruou\\MVC_Ruou.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

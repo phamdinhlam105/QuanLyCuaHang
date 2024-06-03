@@ -7,7 +7,7 @@
 
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="create-receiptdetail col-md-4">
         <p class="h4">Mã hóa đơn: @Html.DisplayFor(model => model.idchosenorder)</p>
         <form asp-action="OrderDetail" method="post">
             <input type="hidden" name="idchosenorder" value="@Model.idchosenorder" />

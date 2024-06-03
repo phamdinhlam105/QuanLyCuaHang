@@ -10,6 +10,7 @@ namespace MVC_Ruou.Controllers
         public async Task<IActionResult> Index()
         {
             Login model = new Login();
+            ViewBag.ShowLogin = true;
             return View(model);
         }
 
@@ -19,17 +20,19 @@ namespace MVC_Ruou.Controllers
         {
             if (ModelState.IsValid)
             {
+                HttpContext.Session.SetString("username",login.username);
+                HttpContext.Session.SetString("password", login.username);
                 login.Check(login);
                 if (login.CheckValid() == 1)
-                    return RedirectToAction("Index", "Wines", new {login = login});
-            }
+                    return RedirectToAction("Index", "Wines");
+                else
+                    ModelState.AddModelError("", "Sai tên đăng nhập hoặc mật khẩu(admin)");
+            }       
             return View(login);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout(Login login)
+        public async Task<IActionResult> Logout()
         {
-            login = null;
+            HttpContext.Session.Clear();
             return RedirectToAction("Index","Home");
         }
     }

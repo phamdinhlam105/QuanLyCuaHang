@@ -24,6 +24,10 @@ namespace MVC_Ruou.Controllers
         // GET: ReceiptDetails
         public async Task<IActionResult> Index()
         {
+            ViewBag.ShowWines = true;
+            ViewBag.ShowReceipts = true;
+            ViewBag.ShowOrders = true;
+            ViewBag.ShowLogout = true;
             return View(await _context.ReceiptDetail.ToListAsync());
         }
 
@@ -88,7 +92,10 @@ namespace MVC_Ruou.Controllers
             var chosenwine = await _context.Wine.Where(s => s.Name == receiptdetailVM.chosenproduct.Name).FirstOrDefaultAsync();
             receiptdetailVM.chosenproduct.inputPrice = chosenwine.inputPrice;
             receiptdetailVM.chosenproduct.outputPrice = chosenwine.outputPrice;
-
+            ViewBag.ShowWines = true;
+            ViewBag.ShowReceipts = true;
+            ViewBag.ShowOrders = true;
+            ViewBag.ShowLogout = true;
             if (ModelState.IsValid)
             {
                 _context.Add(receiptdetailVM.chosenproduct);
@@ -97,6 +104,7 @@ namespace MVC_Ruou.Controllers
             }
             return View(receiptdetailVM);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("UpdateToDatabase")]

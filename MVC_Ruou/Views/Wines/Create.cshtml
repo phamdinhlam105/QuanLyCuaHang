@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-md-4" id="create-box">
-        <form asp-action="Create" id="create-form">
+        <form asp-action="Create" id="create-form" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -35,11 +35,20 @@
                 <input asp-for="Amount" class="form-control" />
                 <span asp-validation-for="Amount" class="text-danger"></span>
             </div>
-            
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="ImageFile"></label>
+                <input asp-for="ImageFile" type="file" class="form-control" accept=".jpg,.jpeg,.png,.gif" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            @if (ViewData["ImageUrl"] != null)
+            {
+                <img src="~/assets/wines/@ViewData["ImageUrl"]" alt="Product Image" />
+            }
+            <div class="form-group">
+                <input type="submit" value="Thêm sản phẩm" class="btn btn-primary" />
             </div>
         </form>
+
     </div>
 </div>
 

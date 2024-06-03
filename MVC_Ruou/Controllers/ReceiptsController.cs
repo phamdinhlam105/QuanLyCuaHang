@@ -35,7 +35,10 @@ namespace MVC_Ruou.Controllers
             {
                 findreceipt = findreceipt.Where(x => x.UserName == chosenUser);
             }
-
+            ViewBag.ShowWines = true;
+            ViewBag.ShowReceipts = true;
+            ViewBag.ShowOrders = true;
+            ViewBag.ShowLogout = true;
             var receiptVM = new ReceiptVM
             {
                 user = new SelectList(await categoryQuery.Distinct().ToListAsync()),

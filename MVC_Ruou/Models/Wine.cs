@@ -24,5 +24,8 @@ namespace MVC_Ruou.Models
         public decimal outputPrice { get; set; }
         [Display(Name = "Số lượng")]
         public int? Amount { get; set; }
+        [NotMapped]
+        [Display(Name = "Ảnh sản phẩm(jpg, jpeg, png, gif")]
+        public IFormFile? ImageFile { get; set; }
     }
 }

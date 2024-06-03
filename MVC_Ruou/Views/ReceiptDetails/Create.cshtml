@@ -5,9 +5,8 @@
     ViewData["banner"] = "Chi tiết đơn nhập kho";
 }
 
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="create-receiptdetail col-md-4" >
         <p class="h4">Mã hóa đơn: @Html.DisplayFor(model => model.chosenreceipt)</p>
         <form asp-action="Create" method="post">
             <input type="hidden" name="chosenreceipt" value="@Model.chosenreceipt" />

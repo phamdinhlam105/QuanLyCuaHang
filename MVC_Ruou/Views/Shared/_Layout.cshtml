@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Wines" asp-action="Index">Cửa hàng rượu ngoại</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size:23px;">Cửa hàng rượu ngoại</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,12 +23,45 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
                         </li>
-                        
-                        @RenderSection("Wines", required: false)
-                        @RenderSection("Receipt", required: false)
-                        @RenderSection("Login", required: false)
-                        @RenderSection("Logout", required: false)
+                        @if(ViewBag.ShowWines!=null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Wines" asp-action="Index">Sản phẩm</a>
+                            </li>
+                        }
+                        @if (ViewBag.ShowReceipts!=null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Receipts" asp-action="Index">Nhập kho</a>
+                            </li>
+                        }
+                      
+                        @if (ViewBag.ShowOrders!=null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index">Quản lý đơn</a>
+                            </li>
+                        }
                     </ul>
+                    @if (ViewBag.ShowLogin != null)
+                    {
+                        <div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index"><button class="btn btn-dark">Đăng nhập</button></a>
+                        </div>
+                    }
+
+                    @if (ViewBag.ShowLogout != null)
+                    {
+                        <div class="login-top">
+                            <div>ADMIN</div>
+                            <div>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">
+                                    <button class="btn btn-dark">Đăng xuất</button>
+                                </a>
+                            </div>
+                        </div>
+                    }
+
                 </div>
             </div>
         </nav>
@@ -45,7 +78,7 @@
 
 
         <div class="footer-container">
-            Pham Dinh Lam&copy; 2024 - MVC_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            Pham Dinh Lam&copy; 2024 - MVC_Project 
         </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

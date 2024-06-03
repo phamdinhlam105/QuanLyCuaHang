@@ -12,16 +12,17 @@ namespace MVC_Ruou.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly MVC_RuouContext _context;
-        public HomeController(ILogger<HomeController> logger, MVC_RuouContext context)
+        private readonly IWebHostEnvironment _environment;
+        public HomeController(ILogger<HomeController> logger, MVC_RuouContext context, IWebHostEnvironment environment)
         {
             _logger = logger;
             _context = context;
+            _environment = environment;
         }
 
-        public async Task<IActionResult> Index(string chosenCategory, string searchString, Login login)
+        public async Task<IActionResult> Index(string chosenCategory, string searchString)
         {
-            login.Check(login);
-            if (login.CheckValid()==1)
+            if ((HttpContext.Session.GetString("username") == "admin") && (HttpContext.Session.GetString("password") == "admin"))
                 return RedirectToAction("Index", "Wines");
             IQueryable<string> categoryQuery = from b in _context.Wine
                                                orderby b.CategoryName
@@ -36,12 +37,13 @@ namespace MVC_Ruou.Controllers
             {
                 findwine = findwine.Where(x => x.CategoryName == chosenCategory);
             }
-
+            ViewBag.ShowLogin = true;
             var categoryVM = new CategoryNameViewModel
             {
                 categoryName = new SelectList(await categoryQuery.Distinct().ToListAsync()),
                 wines = await findwine.ToListAsync()
             };
+            ViewData["WebRootPath"] = _environment.WebRootPath;
             return View(categoryVM);
         }
         public async Task<IActionResult> Order()

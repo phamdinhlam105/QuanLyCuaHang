@@ -3,24 +3,7 @@
 @{
     ViewData["Title"] = "Index";
     ViewData["banner"] = "Tất cả các chi tiết nhập kho";
-    @section Wines {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Wines" asp-action="Index">Sản phẩm</a>
-        </li>
-    }
-    ;
-    @section Receipt {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Receipts" asp-action="Index">Nhập kho</a>
-        </li>
-    }
-    ;
-    @section Logout {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Đăng xuất</a>
-        </li>
-    }
-    ;
+    
 }
 
 <table class=" table table-hover" id="product-table">

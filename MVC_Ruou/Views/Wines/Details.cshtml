@@ -39,6 +39,15 @@
             @Html.DisplayFor(model => model.Amount)
         </dd>
     </dl>
+        @if (ViewData["ImageUrl"] != null)
+        {
+            <img src="~/assets/wines/@ViewData["ImageUrl"]" alt="Product Image" width="80%" />
+        }
+        else
+        {
+            <p>Sản phẩm này chưa được up ảnh</p>
+        }
+
         <a asp-action="Edit" asp-route-id="@Model?.ID"><button class="btn btn-primary">Chỉnh sửa</button></a>
         <a asp-action="Index"><button class="btn btn-secondary">Quay lại</button></a>
     </div>
