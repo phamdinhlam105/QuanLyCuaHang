@@ -1,6 +1,10 @@
 # QuanLyCuaHang
+
 ASP.NET CORE MVC
-link demo: http://phamdinhlam.somee.com/
-admin account:
-              id: admin
-              password:admin
+
+## Link Demo
+[http://phamdinhlam.somee.com/](http://phamdinhlam.somee.com/)
+
+## Admin Account
+- **ID**: admin
+- **Password**: admin
