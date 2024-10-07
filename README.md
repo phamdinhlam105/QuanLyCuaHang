@@ -1,4 +1,4 @@
-# QuanLyCuaHang
+# StoreManagement
 
 ASP.NET CORE MVC
 
