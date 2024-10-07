@@ -5,6 +5,9 @@ ASP.NET CORE MVC
 ## Link Demo
 [http://phamdinhlam.somee.com/](http://phamdinhlam.somee.com/)
 
+##Database
+SQL
+
 ## Description
 - **CRUD Product**: Create, Read, Update, and Delete products.
 - **Search by Name, Category**: Allows searching for products by their name or category.
